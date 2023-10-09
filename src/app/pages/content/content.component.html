@@ -1,15 +1,12 @@
-<div class="container__content">
-  <div class="content__cover">
-    <img src="{{ photoCover }}" alt="" srcset="">
-  </div>
-  <div class="content__title">
-    <h1>{{ contentTitle }}</h1>
-    <hr />
-  </div>
-  <div class="content__description">
-    <a [routerLink]="['']"> << VOLTAR </a>
-    <p>
-      {{ contentDescription }}
-    </p>
+<div class="card d-block w-100">
+  <img src="{{item.photoCover}}" class="card-img-top" alt="{{item.description}}">
+  <div class="card-body">
+    <h5 class="card-title">{{item.title}}</h5>
+    <p class="card-text">{{item.text}}</p>
+    <div class="row justify-content-center">
+      <div class="col-2">
+        <button [routerLink]="['']" class="btn btn-secondary btn-sm w-100">Voltar</button>
+      </div>
+    </div>
   </div>
 </div>

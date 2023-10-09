@@ -1,24 +1,12 @@
-<div class="container__small-card">
-
-  <div class="container__small-card-content">
-    <div class="small-card__photo">
-      <img
-        src="{{ photoCover }}"
-        alt=""
-        srcset=""
-      >
-    </div>
-
-    <div class="small-card__title">
-      <h1><a [routerLink]="['content', Id]" >{{ cardTitle }}</a></h1>
+<div class="card" style="width: 18rem; height: 100%;">
+  <img src="{{photoCover}}" class="card-img-top" alt="{{description}}">
+  <div class="card-body">
+    <h5 class="card-title">{{cardTitle}}</h5>
+    <p class="card-text">{{cardText}}</p>
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <button [routerLink]="['content', Id]" class="btn btn-secondary btn-sm">Leia mais...</button>
+      </div>
     </div>
   </div>
-
-  <div class="container__small-card__separator">
-    <hr>
-  </div>
-
 </div>
-
-
-
